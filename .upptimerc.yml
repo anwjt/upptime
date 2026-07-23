@@ -1,33 +1,58 @@
 owner: anwjt
 repo: upptime
-
 sites:
-  - name: Member Portal (ระบบสมาชิก / My Account)
+  # ==========================================
+  # 1. ระบบภายในของเราเอง (Internal Systems)
+  # ==========================================
+  - name: 🌐 Main Website (หน้าเว็บหลัก)
+    url: https://sahapanich.digital/
+    
+  - name: 👥 Member Portal (หน้าระบบสมาชิก)
     url: https://sahapanich.digital/member_sp
   
-  - name: Admin Control Panel (ระบบจัดการหลังบ้าน)
-    url: https://sahapanich.digital/admin
+  - name: 🔐 Member Login (หน้าเข้าสู่ระบบ)
+    url: https://sahapanich.digital/member_sp/login
     
-  - name: LinkStack & Bio (ระบบหน้ารวมลิงก์)
-    url: https://sahapanich.digital/link
-
-  - name: Forms & Polls (ระบบแบบสอบถาม/ข้อสอบ)
-    url: https://sahapanich.digital/forms
-
-  - name: LINE Webhook & Chat (ระบบเชื่อมต่อแชท LINE)
-    url: https://sahapanich.digital/api/line/webhook
+  - name: ⚙️ Admin Control Panel (ระบบหลังบ้าน)
+    url: https://sahapanich.digital/admin/member_sp
+    
+  - name: 💬 Internal LINE API (ระบบส่งข้อความ)
+    url: https://sahapanich.digital/api/admin/line/push
     expectedStatusCodes: [200, 400, 401, 405]
 
-  - name: API - Google Maps Reviews (ระบบดึงข้อมูลรีวิว)
-    url: https://sahapanich.digital/api/places/reviews
-    expectedStatusCodes: [200, 400, 401, 405]
+  # ==========================================
+  # 2. เซิร์ฟเวอร์และ API ภายนอก (External Dependencies)
+  # ==========================================
+  - name: 📦 Catalog Image Server (เซิร์ฟเวอร์รูปสินค้า)
+    url: https://ecat.sahapanich.com
+    expectedStatusCodes: [200, 403, 404]
+
+  - name: ⚡ Cloudflare CDN (ระบบกระจายไฟล์)
+    url: https://cdn-img.sahapanich.digital
+    expectedStatusCodes: [200, 403, 404]
+
+  - name: ☁️ Backblaze B2 Storage (คลังเก็บไฟล์)
+    url: https://s3.us-east-005.backblazeb2.com
+    expectedStatusCodes: [200, 400, 401, 403, 405]
+
+  - name: 🗄️ Supabase Database (ฐานข้อมูลสำรอง)
+    url: https://lhvwxaazkvyygrwmlasr.supabase.co
+    expectedStatusCodes: [200, 400, 401, 403, 404]
+
+  - name: 🛡️ ScraperAPI (ระบบทะลุบล็อกบอท)
+    url: https://api.scraperapi.com
+    expectedStatusCodes: [200, 401, 404]
+
+  - name: 📧 Resend API (ระบบส่งอีเมล)
+    url: https://api.resend.com
+    expectedStatusCodes: [200, 401, 404]
 
 status-website:
-  # ตั้งค่าโดเมน
-  cname: status.sahapanich.digital
+  # cname: status.sahapanich.digital
+  baseUrl: /upptime # (ถ้าใช้โดเมนตัวเองแล้ว ให้ลบบรรทัดนี้ทิ้ง แล้วเอา # หน้า cname ออกครับ)
   
   name: Sahapanich Digital Status
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   introTitle: "รายงานสถานะระบบของ Sahapanich Digital"
-  introMessage: "หน้านี้จะแสดงสถานะการทำงานของเซิร์ฟเวอร์แบบ Real-time หากระบบขัดข้อง บอทจะแจ้งเตือนและบันทึกเวลาไว้ที่นี่โดยอัตโนมัติ"
+  introMessage: "หน้านี้จะแสดงสถานะการทำงานของเซิร์ฟเวอร์แบบ Real-time (รวมถึง API ภายนอกที่ระบบพึ่งพา) หากระบบขัดข้อง บอทจะแจ้งเตือนและบันทึกเวลาไว้ที่นี่โดยอัตโนมัติ"
   theme: light
