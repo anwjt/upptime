@@ -1,38 +1,28 @@
-# Change these first
-owner: anwjt # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: (ใส่ username github ของคุณ)
+repo: (ใส่ชื่อโปรเจกต์ของคุณ)
 
 sites:
-  - name: Member Portal
+  - name: Member Portal (หน้าเว็บสมาชิก)
     url: https://sahapanich.digital
   
-  - name: Admin Dashboard (ระบบจัดการหลังบ้าน)
+  - name: Admin Dashboard (ระบบหลังบ้าน)
     url: https://sahapanich.digital/admin/member_sp
     
-  - name: LINE Messaging API (ระบบส่งข้อความ)
+  - name: LINE Messaging API
     url: https://sahapanich.digital/api/admin/line/push
-    expectedStatusCodes: [200, 400, 401, 405] # เผื่อกรณีเข้าผ่านบอทแล้วได้ Error 400 จะได้ไม่มองว่าเว็บล่ม
-  - name: Google Maps Reviews (ระบบดึงข้อมูลรีวิว)
+    expectedStatusCodes: [200, 400, 401, 405]
+
+  - name: Google Maps Reviews 
     url: https://sahapanich.digital/api/places/reviews
     expectedStatusCodes: [200, 400, 401, 405]
+
 status-website:
-  # ตั้งค่าผูกโดเมน
+  # ใส่ชื่อโดเมน (หรือใส่ # ไว้ข้างหน้าถ้าจะปิดไปก่อนเพื่อพรีวิวบน github.io)
   cname: status.sahapanich.digital
-  name: Sahapanich System Status
+  
+  # การตั้งค่าหน้าเว็บ
+  name: Sahapanich Status
+  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   introTitle: "รายงานสถานะระบบของ สหพานิช"
   introMessage: "หน้านี้จะแสดงสถานะการทำงานของเซิร์ฟเวอร์แบบ Real-time หากระบบขัดข้อง บอทจะแจ้งเตือนและบันทึกเวลาไว้ที่นี่โดยอัตโนมัติ"
   theme: light
- 
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
-  navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
