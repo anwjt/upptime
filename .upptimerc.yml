@@ -46,7 +46,7 @@ sites:
     expectedStatusCodes: [200, 401, 404]
 
 status-website:
- cname: status.sahapanich.digital
+# cname: status.sahapanich.digital
   #baseUrl: /upptime # (ถ้าใช้โดเมนตัวเองแล้ว ให้ลบบรรทัดนี้ทิ้ง แล้วเอา # หน้า cname ออกครับ)
   
   name: Sahapanich Digital Status
