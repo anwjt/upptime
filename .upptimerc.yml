@@ -22,7 +22,7 @@ status-website:
   introTitle: "รายงานสถานะระบบของ สหพานิช"
   introMessage: "หน้านี้จะแสดงสถานะการทำงานของเซิร์ฟเวอร์แบบ Real-time หากระบบขัดข้อง บอทจะแจ้งเตือนและบันทึกเวลาไว้ที่นี่โดยอัตโนมัติ"
   theme: light
-  cname: demo.upptime.js.org
+ 
   # baseUrl: /your-repo-name
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Upptime
