@@ -2,27 +2,32 @@ owner: anwjt
 repo: upptime
 
 sites:
-  - name: Member Portal (หน้าเว็บสมาชิก)
-    url: https://sahapanich.digital
+  - name: Member Portal (ระบบสมาชิก / My Account)
+    url: https://sahapanich.digital/member_sp
   
-  - name: Admin Dashboard (ระบบหลังบ้าน)
-    url: https://sahapanich.digital/admin/member_sp
+  - name: Admin Control Panel (ระบบจัดการหลังบ้าน)
+    url: https://sahapanich.digital/admin
     
-  - name: LINE Messaging API
-    url: https://sahapanich.digital/api/admin/line/push
+  - name: LinkStack & Bio (ระบบหน้ารวมลิงก์)
+    url: https://sahapanich.digital/link
+
+  - name: Forms & Polls (ระบบแบบสอบถาม/ข้อสอบ)
+    url: https://sahapanich.digital/forms
+
+  - name: LINE Webhook & Chat (ระบบเชื่อมต่อแชท LINE)
+    url: https://sahapanich.digital/api/line/webhook
     expectedStatusCodes: [200, 400, 401, 405]
 
-  - name: Google Maps Reviews 
+  - name: API - Google Maps Reviews (ระบบดึงข้อมูลรีวิว)
     url: https://sahapanich.digital/api/places/reviews
     expectedStatusCodes: [200, 400, 401, 405]
 
 status-website:
-  # ใส่ชื่อโดเมน (หรือใส่ # ไว้ข้างหน้าถ้าจะปิดไปก่อนเพื่อพรีวิวบน github.io)
+  # ตั้งค่าโดเมน
   cname: status.sahapanich.digital
   
-  # การตั้งค่าหน้าเว็บ
-  name: Sahapanich Status
+  name: Sahapanich Digital Status
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  introTitle: "รายงานสถานะระบบของ สหพานิช"
+  introTitle: "รายงานสถานะระบบของ Sahapanich Digital"
   introMessage: "หน้านี้จะแสดงสถานะการทำงานของเซิร์ฟเวอร์แบบ Real-time หากระบบขัดข้อง บอทจะแจ้งเตือนและบันทึกเวลาไว้ที่นี่โดยอัตโนมัติ"
   theme: light
