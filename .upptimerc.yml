@@ -4,51 +4,49 @@ sites:
   # ==========================================
   # 1. ระบบภายในของเราเอง (Internal Systems)
   # ==========================================
-  - name: 🌐 Main Website (หน้าเว็บหลัก)
+  - name: Main Website
     url: https://sahapanich.digital/
     
-  - name: 👥 Member Portal (หน้าระบบสมาชิก)
+  - name: Member Portal
     url: https://sahapanich.digital/member_sp
   
-  - name: 🔐 Member Login (หน้าเข้าสู่ระบบ)
+  - name: Member Login
     url: https://sahapanich.digital/member_sp/login
     
-  - name: ⚙️ Admin Control Panel (ระบบหลังบ้าน)
+  - name: Admin Control Panel
     url: https://sahapanich.digital/admin/member_sp
     
-  - name: 💬 Internal LINE API (ระบบส่งข้อความ)
+  - name: Internal LINE API
     url: https://sahapanich.digital/api/admin/line/push
     expectedStatusCodes: [200, 400, 401, 405]
 
   # ==========================================
   # 2. เซิร์ฟเวอร์และ API ภายนอก (External Dependencies)
   # ==========================================
-  - name: 📦 Catalog Image Server (เซิร์ฟเวอร์รูปสินค้า)
+  - name: Catalog Image Server
     url: https://ecat.sahapanich.com
     expectedStatusCodes: [200, 403, 404]
 
-  - name: ⚡ Cloudflare CDN (ระบบกระจายไฟล์)
+  - name: Cloudflare CDN 
     url: https://cdn-img.sahapanich.digital
     expectedStatusCodes: [200, 403, 404]
 
-  - name: ☁️ Backblaze B2 Storage (คลังเก็บไฟล์)
+  - name: B2 Storage
     url: https://s3.us-east-005.backblazeb2.com
     expectedStatusCodes: [200, 400, 401, 403, 405]
 
-  - name: 🗄️ Supabase Database (ฐานข้อมูลสำรอง)
-    url: https://lhvwxaazkvyygrwmlasr.supabase.co
-    expectedStatusCodes: [200, 400, 401, 403, 404]
 
-  - name: 🛡️ ScraperAPI (ระบบทะลุบล็อกบอท)
+
+  - name: API SCP
     url: https://api.scraperapi.com
     expectedStatusCodes: [200, 401, 404]
 
-  - name: 📧 Resend API (ระบบส่งอีเมล)
+  - name: Resend API 
     url: https://api.resend.com
     expectedStatusCodes: [200, 401, 404]
 
 status-website:
-  # cname: status.sahapanich.digital
+ cname: status.sahapanich.digital
   #baseUrl: /upptime # (ถ้าใช้โดเมนตัวเองแล้ว ให้ลบบรรทัดนี้ทิ้ง แล้วเอา # หน้า cname ออกครับ)
   
   name: Sahapanich Digital Status
